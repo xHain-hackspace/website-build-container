@@ -1,5 +1,12 @@
-FROM eclipsefdn/hugo-node:h0.120.4-n18.18.2
+FROM debian:trixie-slim
 
-RUN apt update && apt install -y jq
+# update and upgrade
+RUN export DEBIAN_FRONTEND=noninteractive \
+    && apt-get update -y && apt-get install -y --no-install-recommends \
+    ca-certificates \
+    curl \
+    hugo \
+    jq
 
-
+# Clean up APT when done.
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
