@@ -1,4 +1,4 @@
-FROM debian:trixie
+FROM debian:trixie-slim
 
 # update and upgrade
 RUN export DEBIAN_FRONTEND=noninteractive \
