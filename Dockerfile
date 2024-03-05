@@ -6,6 +6,9 @@ RUN export DEBIAN_FRONTEND=noninteractive \
     ca-certificates \
     curl \
     hugo \
+    python3 \
+    python3-requests \
+    python3-tz \
     jq
 
 # Clean up APT when done.
