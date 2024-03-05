@@ -5,13 +5,13 @@
   ],
   "packageRules": [
     {
-      "matchDatasources": [
+      "datasources": [
         "docker"
       ],
-      "matchPackageNames": [
-        "debian"
+      "updateTypes": [
+        "major"
       ],
-      "versioning": "loose"
+      "enabled": true
     }
   ]
 }
